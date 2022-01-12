@@ -1,13 +1,13 @@
-from  math import * 
+from math import * 
 
 A = input("Lower bound (a): ")
 A = eval(A)
-B = float(input("Upper bound (b): "))
+B = input("Upper bound (b): ")
 B = eval(B)
-N = float(input("Sub intervals (n): "))
+N = float(input("Subintervals (n): "))
 equation  = input("Enter equation: ")
 
-stepSize = (B-A)/N
+stepSize = (B - A)/N
 
 i = A 
 heights = []
@@ -23,7 +23,7 @@ while A <= i <= B:
 for i in range(1, len(heights) - 1):
     heights[i] = heights[i] * 2
 
-# Multiply everything is heights by the multiplier 
+# Multiply everything in heights by the multiplier 
 multiplier = (B - A) / (2 * N)
 sum = 0
 for height in heights: 
