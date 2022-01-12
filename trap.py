@@ -1,7 +1,9 @@
 from  math import * 
 
-A = float(input("Lower bound (a): "))
+A = input("Lower bound (a): ")
+A = eval(A)
 B = float(input("Upper bound (b): "))
+B = eval(B)
 N = float(input("Sub intervals (n): "))
 equation  = input("Enter equation: ")
 
@@ -41,5 +43,3 @@ print("]")
 
 # Print total sum 
 print(f"Total sum: {round(sum, 4)}")
-
-
