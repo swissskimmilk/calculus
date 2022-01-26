@@ -1,5 +1,3 @@
-# TODO: check that n is even
-
 from math import * 
 
 A = input("Lower bound (a): ")
@@ -35,16 +33,16 @@ for height in heights:
     sum += height * multiplier 
 
 # Print out the values being multiplied 
-print(f"Math: {round(multiplier, 4)}[{heights[0]}", end="")
+print("Math: {}[{}".format(round(multiplier, 4), heights[0]), end="")
 for i in range(1, len(heights)): 
-    print(f" + {round(heights[i], 4)}", end="")
+    print(" + {}".format(round(heights[i], 4)), end="")
 print("]")
 
 # Print out the x values 
-print(f"X values: [{xValues[0]}", end="")
+print("X values: [{}".format(xValues[0]), end="")
 for i in range(1, len(xValues)):
-    print(f", {round(xValues[i], 4)}", end="")
+    print(", {}".format(round(xValues[i], 4)), end="")
 print("]")
 
 # Print total sum 
-print(f"Total sum: {round(sum, 4)}")
+print("Total sum: {}".format(round(sum, 4)))
