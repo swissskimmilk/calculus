@@ -30,15 +30,15 @@ for height in heights:
     sum += height * multiplier 
 
 # Print out the values being multiplied 
-print(f"Math: {round(multiplier, 2)}[{heights[0]}", end="")
+print(f"Math: {round(multiplier, 4)}[{heights[0]}", end="")
 for i in range(1, len(heights)): 
-    print(f" + {round(heights[i], 2)}", end="")
+    print(f" + {round(heights[i], 4)}", end="")
 print("]")
 
 # Print out the x values 
 print(f"X values: [{xValues[0]}", end="")
 for i in range(1, len(xValues)):
-    print(f", {xValues[i]}", end="")
+    print(f", {round(xValues[i],1)}", end="")
 print("]")
 
 # Print total sum 
