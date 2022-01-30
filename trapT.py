@@ -28,9 +28,9 @@ for y in yArray:
     sum += y * multiplier 
 
 # Print out the values being multiplied 
-print("Math: {}[{}".format(round(multiplier, 2), yArray[0]), end="")
+print("Math: {}[{}".format(round(multiplier, 4), yArray[0]), end="")
 for i in range(1, len(yArray)): 
-    print(" + {}".format(round(yArray[i], 2)), end="")
+    print(" + {}".format(round(yArray[i], 4)), end="")
 print("]")
 
 # Print total sum 

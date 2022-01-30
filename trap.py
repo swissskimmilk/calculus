@@ -38,7 +38,7 @@ print("]")
 # Print out the x values 
 print("X values: [{}".format(xValues[0]), end="")
 for i in range(1, len(xValues)):
-    print(", {}".format(round(xValues[i],1)), end="")
+    print(", {}".format(round(xValues[i],4)), end="")
 print("]")
 
 # Print total sum 
