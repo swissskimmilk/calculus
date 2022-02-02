@@ -3,11 +3,12 @@ from math import *
 def eulersmethod():
   n = int(input("Enter number of steps (n): "))
   stepSize = float(input("Enter step size (h): "))
-  initY = float(input("Enter initial y value (y(0)): "))
+  initX = float(input("Enter initial x: "))
+  initY = float(input("Enter y({}): ".format(initX)))
   equation = input("Enter equation: ")
   
   currN = 0
-  currX = 0
+  currX = initX
   currY = initY
   currYPrime = eval(equation, None, {'x':currX, 'y':currY})
   
