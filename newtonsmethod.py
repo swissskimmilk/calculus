@@ -6,10 +6,6 @@ def newtonsmethod():
     max_iterations = 20
     epsilon = 10**(-6)
     
-    # Input
-    f = input("Function: ")
-    df = input("Derivative of function: ")
-    x0 = int(input("Initial x-value: "))
     
     # Initial values
     n = 1
@@ -18,13 +14,9 @@ def newtonsmethod():
     dfx = eval(df, None, {'x':xn})
 
     # Output lists
-    n_list = ["n"]
-    xn_list = ["xn"]
-    fx_list = ["fx"]
-    dfx_list = ["dfx"]
+    n_list, xn_list, fx_list, dfx_list = ["n"], ["xn"], ["fx"], ["dfx"]
     
     while n <= max_iterations and abs(fx) > epsilon and dfx != 0:
-        
         xn_list.append(xn)
         xn = xn - (fx / dfx)
 
@@ -36,11 +28,9 @@ def newtonsmethod():
         fx = eval(f, None, {'x':xn})
         dfx = eval(df, None, {'x':xn})
         
-        print(n, xn, fx, dfx, "\n")
-        
     # Format output
     def list_length(lst):
-        length = 0
+        length = len(lst[0])
         for i in range(1, len(lst)):
             lst[i] = round(lst[i], 5)
             if len(str(lst[i])) > length:
@@ -58,11 +48,15 @@ def newtonsmethod():
                                                 fx_list[i], fx_length + 1,
                                                 dfx_list[i], dfx_length + 1))
         
-    if  abs(fx_list[-1]) <= epsilon:
+    if  abs(fx) <= epsilon:
         print("Found solution.")
     elif dfx == 0:
         print("Derivative is 0. No solution found.")
-    elif n == max_iterations:
+    elif n > max_iterations:
         print("Exceeded maximum iterations. No solution found.")
+        
+f = input("Function: ")
+df = input("Derivative: ")
+x0 = float(input("Initial x-value: "))
  
-newtonsmethod()
+newtonsmethod(f, df, x0)
